@@ -1,46 +1,94 @@
 const hamburgerMenu = document.querySelector('.hamburger-icon')
 const navMobile = document.querySelector('.nav-mobile')
-const tabOverview = document.querySelector('.tab-overview')
-const tabStructure = document.querySelector('.tab-structure')
-const tabSurface = document.querySelector('.tab-surface')
-const tabOverviewContent = document.querySelector('.tab-overview-content')
-const tabStructureContent = document.querySelector('.tab-structure-content')
-const tabSurfaceContent = document.querySelector('.tab-surface-content')
 
 const tabs = [
-    { button: document.querySelector('.tab-overview'), content: document.querySelector('.tab-overview-content') },
-    { button: document.querySelector('.tab-structure'), content: document.querySelector('.tab-structure-content') },
-    { button: document.querySelector('.tab-surface'), content: document.querySelector('.tab-surface-content') }
-];
+	{ button: document.querySelector('.tab-overview'), content: document.querySelector('.tab-overview-content') },
+	{ button: document.querySelector('.tab-structure'), content: document.querySelector('.tab-structure-content') },
+	{ button: document.querySelector('.tab-surface'), content: document.querySelector('.tab-surface-content') },
+]
+
+let activeIndex = 0
+
+const tabsTabletDesktop = [
+	{
+		buttons: document.querySelectorAll('.tab-overview-tablet-desktop'),
+		contents: document.querySelectorAll('.tab-overview-content'),
+	},
+	{
+		buttons: document.querySelectorAll('.tab-structure-tablet-desktop'),
+		contents: document.querySelectorAll('.tab-structure-content'),
+	},
+	{
+		buttons: document.querySelectorAll('.tab-surface-tablet-desktop'),
+		contents: document.querySelectorAll('.tab-surface-content'),
+	},
+]
 
 hamburgerMenu.addEventListener('click', () => {
-    navMobile.classList.toggle('hidden')
+	navMobile.classList.toggle('hidden')
 })
 
-tabs.forEach(({button, content}, index) => {
-    button.addEventListener('click', () => {
-        tabs.forEach(({ content: otherContent }, otherIndex) => {
-            if(index === otherIndex) {
-                otherContent.classList.add('flex')
-                otherContent.classList.remove('hidden')
-            } else {
-                otherContent.classList.remove('flex')
-                otherContent.classList.add('hidden')
-            }
-            
-            currentTab()
-        })
-    })
-})
+function switchTab(index) {
+	console.log(index);
+	activeIndex = index
 
-function currentTab() {
-    tabs.forEach(({button, content}, index) => {
-        if(content.classList.contains('flex')) {
-            button.classList.add('tab-emphasis')
-        } else {
-            button.classList.remove('tab-emphasis')
-        }
-    })
+	tabs.forEach(({ content }, i) => {
+		if (i == index) {
+			content.classList.add('flex')
+			content.classList.remove('hidden')
+		} else {
+			content.classList.remove('flex')
+			content.classList.add('hidden')
+		}
+	})
+
+	tabsTabletDesktop.forEach(({ contents }, i) => {
+		contents.forEach((content) => {
+			if (i == index) {
+				content.classList.add('flex')
+				content.classList.remove('hidden')
+			} else {
+				content.classList.remove('flex')
+				content.classList.add('hidden')
+			}
+		})
+	})
+	updateTabStyles(index)
 }
 
-currentTab()
+function updateTabStyles(activeIndex) {
+	tabs.forEach(({ button }, i) => {
+		if (i == activeIndex) {
+			button.classList.add('tab-emphasis')
+		} else {
+			button.classList.remove('tab-emphasis')
+		}
+	})
+
+	tabsTabletDesktop.forEach(({ buttons }, i) => {
+		buttons.forEach((button) => {
+			if (i == activeIndex) {
+				button.classList.add('tab-emphasis')
+			} else {
+				button.classList.remove('tab-emphasis')
+			}
+		})
+	})
+}
+
+tabs.forEach(({ button }, index) => {
+	console.log(button);
+	button.addEventListener('click', () => {
+		switchTab(index)
+	})
+})
+
+tabsTabletDesktop.forEach(({ buttons, contents }, index) => {
+	buttons.forEach(button => {
+		button.addEventListener('click', () => {
+			switchTab(index)
+		})
+	})
+})
+switchTab(0)
+
