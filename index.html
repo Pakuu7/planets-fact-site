@@ -3,48 +3,272 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Frontend Mentor | Planets fact site</title>
 		<link rel="stylesheet" href="dist/css/tailwind.min.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=League+Spartan:wght@100..900&display=swap"
 			rel="stylesheet" />
-
-		<title>Frontend Mentor | Planets fact site</title>
 	</head>
 	<body>
-		Mercury
-		<h1 class="font-antonio text-4xl">Nagłówek w Antonio</h1>
-		<p class="font-leagueSpartan text-lg">Tekst w League Spartan</p>
-
-		<!-- Overview Content Start -->
-
-		Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97
-		Earth days, the shortest of all the Sun's planets. Mercury is one of four terrestrial planets in the Solar System,
-		and is a rocky body like Earth. Source : Wikipedia
-		<!-- URL: https://en.wikipedia.org/wiki/Mercury_(planet) -->
-
-		<!-- Overview Content End -->
-
-		<!-- Internal Structure Content Start -->
-
-		Mercury appears to have a solid silicate crust and mantle overlying a solid, iron sulfide outer core layer, a deeper
-		liquid core layer, and a solid inner core. The planet's density is the second highest in the Solar System at 5.427
-		g/cm3 , only slightly less than Earth's density. Source : Wikipedia
-		<!-- URL: https://en.wikipedia.org/wiki/Mercury_(planet)#Internal_structure -->
-
-		<!-- Internal Structure Content End -->
-
-		<!-- Surface Geology Content Start -->
-
-		Mercury's surface is similar in appearance to that of the Moon, showing extensive mare-like plains and heavy
-		cratering, indicating that it has been geologically inactive for billions of years. It is more heterogeneous than
-		either Mars's or the Moon’s. Source : Wikipedia
-		<!-- URL: https://en.wikipedia.org/wiki/Mercury_(planet)#Surface_geology -->
-
-		<!-- Surface Geology Content End -->
-
-		01 Overview 02 Internal Structure 03 Surface Geology Rotation Time 58.6 Days Revolution Time 87.97 Days Radius
-		2,439.7 KM Average Temp. 430°c
+		<header
+			class="relative flex justify-between items-center py-4 px-2 font-antonio bg-veryDarkBlue border-b-2 border-b-darkGray sm:justify-center sm:flex-col">
+			<div class="text-white">
+				<p class="text-2xl uppercase sm:text-3xl">The planets</p>
+			</div>
+			<div class="sm:hidden">
+				<div class="cursor-pointer px-4 py-2">
+					<img src="dist/img/icon-hamburger.svg" class="hamburger-icon" alt="Menu icon" />
+				</div>
+				<nav class="absolute nav-mobile bg-veryDarkBlue min-h-[100vh] min-w-[100%] left-0 top-[52px] hidden">
+					<div class="text-white py-4 px-2 uppercase font-leagueSpartan">
+						<a href="#" class="flex items-center justify-between border-b-2 py-3 border-darkGray cursor-pointer">
+							<div class="flex items-center">
+								<div class="w-3 h-3 mr-4 bg-white rounded-full"></div>
+								<p>Mercury</p>
+							</div>
+							<div><img src="dist/img/icon-chevron.svg" alt="Chevron icon" /></div>
+						</a>
+						<a href="#" class="flex items-center justify-between border-b-2 py-3 border-darkGray cursor-pointer">
+							<div class="flex items-center">
+								<div class="w-3 h-3 mr-4 bg-yellow rounded-full"></div>
+								<p>Venus</p>
+							</div>
+							<div><img src="dist/img/icon-chevron.svg" alt="Chevron icon" /></div>
+						</a>
+						<a href="#" class="flex items-center justify-between border-b-2 py-3 border-darkGray cursor-pointer">
+							<div class="flex items-center">
+								<div class="w-3 h-3 mr-4 bg-blue rounded-full"></div>
+								<p>Earth</p>
+							</div>
+							<div><img src="dist/img/icon-chevron.svg" alt="Chevron icon" /></div>
+						</a>
+						<a href="#" class="flex items-center justify-between border-b-2 py-3 border-darkGray cursor-pointer">
+							<div class="flex items-center">
+								<div class="w-3 h-3 mr-4 bg-orange rounded-full"></div>
+								<p>Mars</p>
+							</div>
+							<div><img src="dist/img/icon-chevron.svg" alt="Chevron icon" /></div>
+						</a>
+						<a href="#" class="flex items-center justify-between border-b-2 py-3 border-darkGray cursor-pointer">
+							<div class="flex items-center">
+								<div class="w-3 h-3 mr-4 bg-cream rounded-full"></div>
+								<p>Jupiter</p>
+							</div>
+							<div><img src="dist/img/icon-chevron.svg" alt="Chevron icon" /></div>
+						</a>
+						<a href="#" class="flex items-center justify-between border-b-2 py-3 border-darkGray cursor-pointer">
+							<div class="flex items-center">
+								<div class="w-3 h-3 mr-4 bg-yellowHight rounded-full"></div>
+								<p>Saturn</p>
+							</div>
+							<div><img src="dist/img/icon-chevron.svg" alt="Chevron icon" /></div>
+						</a>
+						<a href="#" class="flex items-center justify-between border-b-2 py-3 border-darkGray cursor-pointer">
+							<div class="flex items-center">
+								<div class="w-3 h-3 mr-4 bg-turquoise rounded-full"></div>
+								<p>Uranus</p>
+							</div>
+							<div>
+								<img src="dist/img/icon-chevron.svg" alt="Chevron icon" />
+							</div>
+						</a>
+						<a href="#" class="flex items-center justify-between py-3 cursor-pointer">
+							<div class="flex items-center">
+								<div class="w-3 h-3 mr-4 bg-lightBlue rounded-full"></div>
+								<p>Neptune</p>
+							</div>
+							<div><img src="dist/img/icon-chevron.svg" alt="Chevron icon" /></div>
+						</a>
+					</div>
+				</nav>
+			</div>
+			<div class="nav-desktop hidden sm:block sm:w-full">
+				<div class="flex w-full justify-between text-white pt-8 px-2 uppercase font-leagueSpartan">
+					<a href="#" class="py-4 px-2 cursor-pointer">
+						<p>Mercury</p>
+					</a>
+					<a href="#" class="py-4 px-2 cursor-pointer">
+						<p>Venus</p>
+					</a>
+					<a href="#" class="py-4 px-2 cursor-pointer">
+						<p>Earth</p>
+					</a>
+					<a href="#" class="py-4 px-2 cursor-pointer">
+						<p>Mars</p>
+					</a>
+					<a href="#" class="py-4 px-2 cursor-pointer">
+						<p>Jupiter</p>
+					</a>
+					<a href="#" class="py-4 px-2 cursor-pointer">
+						<p>Saturn</p>
+					</a>
+					<a href="#" class="py-4 px-2 cursor-pointer">
+						<p>Uranus</p>
+					</a>
+					<a href="#" class="py-4 px-2 cursor-pointer">
+						<p>Neptune</p>
+					</a>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div class="font-leagueSpartan sm:hidden">
+				<div class="flex justify-between px-2 text-sm font-bold text-lightGray uppercase border-b-2 border-b-darkGray">
+					<div class="tab-overview p-4 cursor-pointer">Overview</div>
+					<div class="tab-structure p-4 cursor-pointer">Structure</div>
+					<div class="tab-surface p-4 cursor-pointer">Surface</div>
+				</div>
+			</div>
+			<div class="tab-overview-content flex justify-center items-center flex-col px-2">
+				<div class="max-w-[110px]">
+					<img src="dist/img/planet-mercury.svg" class="my-20" alt="Mercury Photo" />
+				</div>
+				<div class="text-white text-center px-2 sm:text-left">
+					<div>
+						<h1 class="text-3xl uppercase mb-6 font-antonio sm:mb-4 sm:text-4xl">Mercury</h1>
+					</div>
+					<div class="sm:flex sm:items-center">
+						<p class="font-leagueSpartan font-normal">
+							Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun
+							takes 87.97 Earth days, the shortest of all the Sun's planets. Mercury is one of four terrestrial planets in
+							the Solar System, and is a rocky body like Earth.
+						</p>
+						<div class="tab-desktop hidden sm:flex flex-col px-2 text-sm font-bold min-w-[300px] ml-12 text-lightGray space-y-4 uppercase">
+							<div class="flex tab-overview border border-darkGray py-3 px-6 cursor-pointer">
+								<p class="mr-4">01</p>
+								<p class="text-white">Overview</p>
+							</div>
+							<div class="flex tab-structure border border-darkGray py-3 px-6 cursor-pointer">
+								<p class="mr-4">02</p>
+								<p class="text-white">Internal - Structure</p>
+							</div>
+							<div class="flex tab-surface border border-darkGray py-3 px-6 cursor-pointer">
+								<p class="mr-4">03</p>
+								<p class="text-white">Surface - Geology</p>
+							</div>
+						</div>
+					</div>
+					<div>
+						<p class="text-lightGray my-6 font-leagueSpartan">
+							Source:
+							<a
+								href="https://en.wikipedia.org/wiki/Mercury_(planet)"
+								class="font-bold underline"
+								target="_blank"
+								rel="noopener"
+								>Wikipedia</a
+							>
+							<img src="dist/img/icon-source.svg" class="inline align-middle" alt="" />
+						</p>
+					</div>
+				</div>
+				<div class="text-white w-full space-y-2 uppercase px-2 sm:flex sm:justify-between sm:space-y-0 sm:mb-4">
+					<div class="flex justify-between items-center border-2 px-6 py-3 border-darkGray sm:flex-col sm:items-start">
+						<p class="font-leagueSpartan text-lightGray text-xs font-bold">Rotation time</p>
+						<p class="text-lg font-antonio sm:text-2xl">58.6 days</p>
+					</div>
+					<div class="flex justify-between items-center border-2 px-6 py-3 border-darkGray sm:flex-col sm:items-start">
+						<p class="font-leagueSpartan text-lightGray text-xs font-bold">Revolution Time</p>
+						<p class="text-lg font-antonio sm:text-2xl">87.97 days</p>
+					</div>
+					<div class="flex justify-between items-center border-2 px-6 py-3 border-darkGray sm:flex-col sm:items-start">
+						<p class="font-leagueSpartan text-lightGray text-xs font-bold">Radius</p>
+						<p class="text-lg font-antonio sm:text-2xl">2,439.7 km</p>
+					</div>
+					<div class="flex justify-between items-center border-2 px-6 py-3 border-darkGray sm:flex-col sm:items-start">
+						<p class="font-leagueSpartan text-lightGray text-xs font-bold">Average Temp.</p>
+						<p class="text-lg font-antonio sm:text-2xl">430°c</p>
+					</div>
+				</div>
+			</div>
+			<div class="tab-structure-content hidden justify-center items-center flex-col px-2">
+				<div class="max-w-[110px]">
+					<img src="dist/img/planet-mercury-internal.svg" class="my-20" alt="Mercury Photo" />
+				</div>
+				<div class="text-white text-center px-2">
+					<h1 class="text-3xl uppercase mb-6 font-antonio">Mercury</h1>
+					<p class="font-leagueSpartan">
+						Mercury appears to have a solid silicate crust and mantle overlying a solid, iron sulfide outer core layer,
+						a deeper liquid core layer, and a solid inner core. The planet's density is the second highest in the Solar
+						System at 5.427 g/cm3 , only slightly less than Earth's density.
+					</p>
+					<p class="text-lightGray my-6 font-leagueSpartan">
+						Source:
+						<a
+							href="https://en.wikipedia.org/wiki/Mercury_(planet)#Internal_structure"
+							class="font-bold underline"
+							target="_blank"
+							rel="noopener"
+							>Wikipedia</a
+						>
+						<img src="dist/img/icon-source.svg" class="inline align-middle" alt="" />
+					</p>
+				</div>
+				<div class="text-white w-full space-y-2 uppercase px-2">
+					<div class="flex justify-between items-center border-2 px-6 py-3 border-darkGray">
+						<p class="font-leagueSpartan text-lightGray text-xs font-bold">Rotation time</p>
+						<p class="text-lg font-antonio">58.6 days</p>
+					</div>
+					<div class="flex justify-between items-center border-2 px-6 py-3 border-darkGray">
+						<p class="font-leagueSpartan text-lightGray text-xs font-bold">Revolution Time</p>
+						<p class="text-lg font-antonio">87.97 days</p>
+					</div>
+					<div class="flex justify-between items-center border-2 px-6 py-3 border-darkGray">
+						<p class="font-leagueSpartan text-lightGray text-xs font-bold">Radius</p>
+						<p class="text-lg font-antonio">2,439.7 km</p>
+					</div>
+					<div class="flex justify-between items-center border-2 px-6 py-3 border-darkGray">
+						<p class="font-leagueSpartan text-lightGray text-xs font-bold">Average Temp.</p>
+						<p class="text-lg font-antonio">430°c</p>
+					</div>
+				</div>
+			</div>
+			<div class="tab-surface-content hidden justify-center items-center flex-col px-2">
+				<div class="flex items-center flex-col max-w-[110px]">
+					<img src="dist/img/planet-mercury.svg" class="mt-20" alt="Mercury Photo" />
+					<img src="dist/img/geology-mercury.png" class="max-w-[80px] my-4" alt="Mercury geology photo" />
+				</div>
+				<div class="text-white text-center px-2">
+					<h1 class="text-3xl uppercase mb-6 font-antonio">Mercury</h1>
+					<p class="font-leagueSpartan">
+						Mercury's surface is similar in appearance to that of the Moon, showing extensive mare-like plains and heavy
+						cratering, indicating that it has been geologically inactive for billions of years. It is more heterogeneous
+						than either Mars's or the Moon’s.
+					</p>
+					<p class="text-lightGray my-6 font-leagueSpartan">
+						Source:
+						<a
+							href="https://en.wikipedia.org/wiki/Mercury_(planet)#Surface_geology"
+							class="font-bold underline"
+							target="_blank"
+							rel="noopener"
+							>Wikipedia</a
+						>
+						<img src="dist/img/icon-source.svg" class="inline align-middle" alt="" />
+					</p>
+				</div>
+				<div class="text-white w-full space-y-2 uppercase px-2">
+					<div class="flex justify-between items-center border-2 px-6 py-3 border-darkGray">
+						<p class="font-leagueSpartan text-lightGray text-xs font-bold">Rotation time</p>
+						<p class="text-lg font-antonio">58.6 days</p>
+					</div>
+					<div class="flex justify-between items-center border-2 px-6 py-3 border-darkGray">
+						<p class="font-leagueSpartan text-lightGray text-xs font-bold">Revolution Time</p>
+						<p class="text-lg font-antonio">87.97 days</p>
+					</div>
+					<div class="flex justify-between items-center border-2 px-6 py-3 border-darkGray">
+						<p class="font-leagueSpartan text-lightGray text-xs font-bold">Radius</p>
+						<p class="text-lg font-antonio">2,439.7 km</p>
+					</div>
+					<div class="flex justify-between items-center border-2 px-6 py-3 border-darkGray">
+						<p class="font-leagueSpartan text-lightGray text-xs font-bold">Average Temp.</p>
+						<p class="text-lg font-antonio">430°c</p>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="src/js/main.js"></script>
 	</body>
 </html>

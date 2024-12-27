@@ -4,8 +4,8 @@
 	"description": "",
 	"main": "gulpfile.js",
 	"scripts": {
-		"build": "tailwindcss -i ./src/css/tailwind.css -o ./dist/css/tailwind.css",
-		"watch": "tailwindcss -i ./src/css/tailwind.css -o ./dist/css/tailwind.css --watch"
+		"build": "tailwindcss -i ./src/css/tailwind.css -o ./dist/css/tailwind.min.css",
+		"watch": "tailwindcss -i ./src/css/tailwind.css -o ./dist/css/tailwind.min.css --watch"
 	},
 	"keywords": [],
 	"author": "",

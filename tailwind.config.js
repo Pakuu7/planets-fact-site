@@ -19,6 +19,8 @@ module.exports = {
         orange: 'rgb(205, 81, 32)',
         turquoise: 'rgb(30, 193, 162)',
         blue: 'rgb(45, 104, 240)',
+        cream: 'rgb(236, 173, 122)',
+        yellowHight: 'rgb(252, 203, 107)'
       },
       fontFamily: {
         antonio: ['Antonio', 'sans-serif'],
