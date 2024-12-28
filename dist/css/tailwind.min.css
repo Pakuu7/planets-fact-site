@@ -913,6 +913,11 @@ video {
   transition-duration: 300ms;
 }
 
+:root {
+  --tab-border-color: lightblue;
+  --tab-background-color: rgb(65, 158, 187);
+}
+
 body {
   background-color: rgb(7, 7, 36);
   background-image: url('../../dist/img/background-stars.svg');
@@ -924,11 +929,11 @@ body {
 }
 
 .tab-emphasis-border {
-  border-bottom: 2px solid lightblue;
+  border-bottom: 2px solid var(--tab-border-color, lightblue);
 }
 
 .tab-emphasis-background {
-  background-color: rgb(65, 158, 187);
+  background-color: var(--tab-background-color, rgb(65, 158, 187));
 }
 
 .hover\:bg-gray-700:hover {
@@ -983,10 +988,6 @@ body {
 
   .sm\:justify-center {
     justify-content: center;
-  }
-
-  .sm\:justify-between {
-    justify-content: space-between;
   }
 
   .sm\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
@@ -1105,10 +1106,6 @@ body {
   .lg\:py-6 {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-  }
-
-  .lg\:pr-24 {
-    padding-right: 6rem;
   }
 
   .lg\:pt-0 {

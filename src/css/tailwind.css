@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --tab-border-color: lightblue; 
+  --tab-background-color: rgb(65, 158, 187);
+}
+
 body {
   background-color: rgb(7, 7, 36);
   background-image: url('../../dist/img/background-stars.svg');
@@ -13,8 +18,9 @@ body {
 }
 
 .tab-emphasis-border {
-  border-bottom: 2px solid lightblue;
+  border-bottom: 2px solid var(--tab-border-color, lightblue);
 }
+
 .tab-emphasis-background {
-  background-color: rgb(65, 158, 187);
+  background-color: var(--tab-background-color, rgb(65, 158, 187));
 }

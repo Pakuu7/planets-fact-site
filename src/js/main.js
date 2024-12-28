@@ -24,6 +24,26 @@ const tabsTabletDesktop = [
 	},
 ]
 
+const pageStyles = {
+	'/index.html': { border: 'rgb(65, 158, 187)', background: 'rgb(65, 158, 187)' },
+	'/earth.html': { border: 'rgb(45 104 240)', background: 'rgb(45 104 240)' },
+	'/mars.html': { border: 'rgb(205 81 32)', background: 'rgb(205 81 32)' },
+	'/jupiter.html': { border: 'rgb(236 173 122)', background: 'rgb(236 173 122)' },
+	'/saturn.html': { border: 'rgb(252 203 107)', background: 'rgb(252 203 107)' },
+	'/uranus.html': { border: 'rgb(30 193 162)', background: 'rgb(30 193 162)' },
+	'/venus.html': { border: 'rgb(237 162 73)', background: 'rgb(237 162 73)' },
+	'/neptune.html': { border: 'rgb(65 158 187)', background: 'rgb(65 158 187)' },
+};
+
+const currentPath = window.location.pathname;
+const pageColor = pageStyles[currentPath];
+
+if (pageColor) {
+	document.documentElement.style.setProperty('--tab-border-color', pageColor.border);
+	document.documentElement.style.setProperty('--tab-background-color', pageColor.background);
+}
+
+
 hamburgerMenu.addEventListener('click', () => {
 	navMobile.classList.toggle('hidden')
 })
