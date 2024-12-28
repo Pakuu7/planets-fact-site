@@ -1,63 +1,421 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Planets fact site</title>
-</head>
-<body>
-  Saturn
-
-  <!-- Overview Content Start -->
-
-  Saturn is the sixth planet from the Sun and the second-largest in the Solar 
-  System, after Jupiter. It is a gas giant with an average radius of about 
-  nine and a half times that of Earth. It only has one-eighth the average 
-  density of Earth.
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Saturn -->
-
-  <!-- Overview Content End -->
-
-  <!-- Internal Structure Content Start -->
-
-  Despite consisting mostly of hydrogen and helium, most of Saturn's mass 
-  is not in the gas phase, because hydrogen becomes a non-ideal liquid 
-  when the density is above 0.01 g/cm3, which is reached at a radius 
-  containing 99.9% of Saturn's mass.
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Saturn#Internal_structure -->
-
-  <!-- Internal Structure Content End -->
-
-  <!-- Surface Geology Content Start -->
-
-  The outer atmosphere of Saturn contains 96.3% molecular hydrogen and 3.25% 
-  helium by volume. The planet's most famous feature is its prominent ring 
-  system, which is composed mostly of ice particles with a smaller amount 
-  of rocky debris and dust. 
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Saturn#Atmosphere -->
-
-  <!-- Surface Geology Content End -->
-
-  01 Overview
-  02 Internal Structure
-  03 Surface Geology
-
-  Rotation Time
-  10.8 Hours
-
-  Revolution Time
-  29.46 Years
-
-  Radius
-  58,232 KM
-
-  Average Temp.
-  -138°c
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Saturn | Planets fact site</title>
+		<link rel="stylesheet" href="dist/css/tailwind.min.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=League+Spartan:wght@100..900&display=swap"
+			rel="stylesheet" />
+	</head>
+	<body>
+		<div class="wrapper max-w-[1440px] mx-auto">
+			<header
+				class="relative flex justify-between items-center py-4 px-2 font-antonio bg-veryDarkBlue border-b-2 border-b-darkGray sm:justify-center sm:flex-col lg:flex-row lg:justify-between">
+				<div class="text-white">
+					<p class="text-2xl uppercase sm:text-3xl">The planets</p>
+				</div>
+				<div class="sm:hidden">
+					<div class="cursor-pointer px-4 py-2">
+						<img src="dist/img/icon-hamburger.svg" class="hamburger-icon" alt="Menu icon" />
+					</div>
+					<nav class="absolute nav-mobile bg-veryDarkBlue min-h-[100vh] min-w-[100%] left-0 top-[52px] hidden">
+						<div class="text-white py-4 px-2 uppercase font-leagueSpartan">
+							<a
+								href="index.html"
+								class="flex items-center justify-between border-b py-3 border-darkGray cursor-pointer">
+								<div class="flex items-center">
+									<div class="w-3 h-3 mr-4 bg-white rounded-full"></div>
+									<p>Mercury</p>
+								</div>
+								<div><img src="dist/img/icon-chevron.svg" alt="Chevron icon" /></div>
+							</a>
+							<a
+								href="venus.html"
+								class="flex items-center justify-between border-b-2 py-3 border-darkGray cursor-pointer">
+								<div class="flex items-center">
+									<div class="w-3 h-3 mr-4 bg-yellow rounded-full"></div>
+									<p>Venus</p>
+								</div>
+								<div><img src="dist/img/icon-chevron.svg" alt="Chevron icon" /></div>
+							</a>
+							<a
+								href="earth.html"
+								class="flex items-center justify-between border-b-2 py-3 border-darkGray cursor-pointer">
+								<div class="flex items-center">
+									<div class="w-3 h-3 mr-4 bg-blue rounded-full"></div>
+									<p>Earth</p>
+								</div>
+								<div><img src="dist/img/icon-chevron.svg" alt="Chevron icon" /></div>
+							</a>
+							<a
+								href="mars.html"
+								class="flex items-center justify-between border-b-2 py-3 border-darkGray cursor-pointer">
+								<div class="flex items-center">
+									<div class="w-3 h-3 mr-4 bg-orange rounded-full"></div>
+									<p>Mars</p>
+								</div>
+								<div><img src="dist/img/icon-chevron.svg" alt="Chevron icon" /></div>
+							</a>
+							<a
+								href="jupiter.html"
+								class="flex items-center justify-between border-b-2 py-3 border-darkGray cursor-pointer">
+								<div class="flex items-center">
+									<div class="w-3 h-3 mr-4 bg-cream rounded-full"></div>
+									<p>Jupiter</p>
+								</div>
+								<div><img src="dist/img/icon-chevron.svg" alt="Chevron icon" /></div>
+							</a>
+							<a
+								href="saturn.html"
+								class="flex items-center justify-between border-b-2 py-3 border-darkGray cursor-pointer">
+								<div class="flex items-center">
+									<div class="w-3 h-3 mr-4 bg-yellowHight rounded-full"></div>
+									<p>Saturn</p>
+								</div>
+								<div><img src="dist/img/icon-chevron.svg" alt="Chevron icon" /></div>
+							</a>
+							<a
+								href="uranus.html"
+								class="flex items-center justify-between border-b-2 py-3 border-darkGray cursor-pointer">
+								<div class="flex items-center">
+									<div class="w-3 h-3 mr-4 bg-turquoise rounded-full"></div>
+									<p>Uranus</p>
+								</div>
+								<div>
+									<img src="dist/img/icon-chevron.svg" alt="Chevron icon" />
+								</div>
+							</a>
+							<a href="neptune.html" class="flex items-center justify-between py-3 cursor-pointer">
+								<div class="flex items-center">
+									<div class="w-3 h-3 mr-4 bg-lightBlue rounded-full"></div>
+									<p>Neptune</p>
+								</div>
+								<div><img src="dist/img/icon-chevron.svg" alt="Chevron icon" /></div>
+							</a>
+						</div>
+					</nav>
+				</div>
+				<div class="nav-tablet-desktop hidden sm:block sm:w-full lg:w-[50%]">
+					<div class="flex w-full justify-between text-white pt-8 px-2 uppercase font-leagueSpartan lg:pt-0">
+						<a href="index.html" class="py-4 px-2 relative group">
+							<p>Mercury</p>
+							<div
+								class="absolute left-0 bottom-0 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"></div>
+						</a>
+						<a href="venus.html" class="py-4 px-2 relative group">
+							<p>Venus</p>
+							<div
+								class="absolute left-0 bottom-0 h-[2px] w-0 bg-yellow transition-all duration-300 group-hover:w-full"></div>
+						</a>
+						<a href="earth.html" class="py-4 px-2 relative group">
+							<p>Earth</p>
+							<div
+								class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue transition-all duration-300 group-hover:w-full"></div>
+						</a>
+						<a href="mars.html" class="py-4 px-2 relative group">
+							<p>Mars</p>
+							<div
+								class="absolute left-0 bottom-0 h-[2px] w-0 bg-orange transition-all duration-300 group-hover:w-full"></div>
+						</a>
+						<a href="jupiter.html" class="py-4 px-2 relative group">
+							<p>Jupiter</p>
+							<div
+								class="absolute left-0 bottom-0 h-[2px] w-0 bg-cream transition-all duration-300 group-hover:w-full"></div>
+						</a>
+						<a href="saturn.html" class="py-4 px-2 relative group">
+							<p>Saturn</p>
+							<div
+								class="absolute left-0 bottom-0 h-[2px] w-0 bg-yellowHight transition-all duration-300 group-hover:w-full"></div>
+						</a>
+						<a href="uranus.html" class="py-4 px-2 relative group">
+							<p>Uranus</p>
+							<div
+								class="absolute left-0 bottom-0 h-[2px] w-0 bg-turquoise transition-all duration-300 group-hover:w-full"></div>
+						</a>
+						<a href="neptune.html" class="py-4 px-2 relative group">
+							<p>Neptune</p>
+							<div
+								class="absolute left-0 bottom-0 h-[2px] w-0 bg-lightBlue transition-all duration-300 group-hover:w-full"></div>
+						</a>
+					</div>
+				</div>
+			</header>
+			<main>
+				<div class="font-leagueSpartan sm:hidden">
+					<div class="flex justify-between px-2 text-sm font-bold text-lightGray uppercase border-b border-b-darkGray">
+						<div class="tab-overview p-4 cursor-pointer">Overview</div>
+						<div class="tab-structure p-4 cursor-pointer">Structure</div>
+						<div class="tab-surface p-4 cursor-pointer">Surface</div>
+					</div>
+				</div>
+				<div class="tab-overview-content flex justify-center items-center flex-col px-2">
+					<div class="lg:flex lg:flex-row lg:items-center lg:my-24 lg:w-full lg:justify-around">
+						<div class="mx-auto max-w-[110px] sm:max-w-[250px] lg:min-w-[400px] lg:flex lg:justify-center">
+							<img src="dist/img/planet-saturn.svg" class="planet-image my-20" alt="Saturn Photo" />
+						</div>
+						<div class="text-white text-center px-2 sm:text-left lg:max-w-[400px]">
+							<div>
+								<h1 class="planet-name text-4xl uppercase mb-6 font-antonio sm:mb-4 sm:text-4xl lg:text-6xl lg:mb-8">
+									Saturn
+								</h1>
+							</div>
+							<div class="sm:flex sm:items-center lg:flex-col lg:items-start">
+								<p class="font-leagueSpartan font-normal">
+									Saturn is the sixth planet from the Sun and the second-largest in the Solar System, after Jupiter. It
+									is a gas giant with an average radius of about nine and a half times that of Earth. It only has
+									one-eighth the average density of Earth.
+								</p>
+								<div class="hidden lg:block">
+									<p class="text-lightGray my-6 font-leagueSpartan">
+										Source:
+										<a
+											href="https://en.wikipedia.org/wiki/Saturn"
+											class="font-bold underline"
+											target="_blank"
+											rel="noopener"
+											>Wikipedia</a
+										>
+										<img src="dist/img/icon-source.svg" class="inline align-middle" alt="" />
+									</p>
+								</div>
+								<div
+									class="tab-desktop hidden sm:flex flex-col px-2 text-sm font-bold min-w-[300px] ml-12 text-lightGray space-y-4 uppercase lg:ml-0 lg:px-0 lg:text-lg lg:w-full">
+									<div class="flex tab-overview-tablet-desktop border border-darkGray py-3 px-6 cursor-pointer">
+										<p class="mr-4 text-lightGray">01</p>
+										<p class="text-white">Overview</p>
+									</div>
+									<div
+										class="flex tab-structure-tablet-desktop border border-darkGray py-3 px-6 cursor-pointer hover:bg-gray-700 transition-colors duration-300">
+										<p class="mr-4 text-lightGray">02</p>
+										<p class="text-white">Internal - Structure</p>
+									</div>
+									<div
+										class="flex tab-surface-tablet-desktop border border-darkGray py-3 px-6 cursor-pointer hover:bg-gray-700 transition-colors duration-300">
+										<p class="mr-4 text-lightGray">03</p>
+										<p class="text-white">Surface - Geology</p>
+									</div>
+								</div>
+							</div>
+							<div class="lg:hidden">
+								<p class="text-lightGray my-6 font-leagueSpartan">
+									Source:
+									<a
+										href="https://en.wikipedia.org/wiki/Saturn"
+										class="font-bold underline"
+										target="_blank"
+										rel="noopener"
+										>Wikipedia</a
+									>
+									<img src="dist/img/icon-source.svg" class="inline align-middle" alt="" />
+								</p>
+							</div>
+						</div>
+					</div>
+					<div
+						class="text-white w-full space-y-2 uppercase px-2 sm:flex sm:space-y-0 sm:space-x-4 sm:mb-4 lg:justify-around lg:space-x-8">
+						<div
+							class="flex justify-between items-center border px-6 py-3 border-darkGray sm:flex-col sm:items-start sm:w-full lg:py-6">
+							<p class="font-leagueSpartan text-lightGray text-xs font-bold lg:text-sm">Rotation time</p>
+							<p class="text-lg font-antonio sm:text-xl lg:text-4xl">10.8 Hours</p>
+						</div>
+						<div
+							class="flex justify-between items-center border px-6 py-3 border-darkGray sm:flex-col sm:items-start sm:w-full lg:py-6">
+							<p class="font-leagueSpartan text-lightGray text-xs font-bold lg:text-sm">Revolution Time</p>
+							<p class="text-lg font-antonio sm:text-xl lg:text-4xl">29.46 Years</p>
+						</div>
+						<div
+							class="flex justify-between items-center border px-6 py-3 border-darkGray sm:flex-col sm:items-start sm:w-full lg:py-6">
+							<p class="font-leagueSpartan text-lightGray text-xs font-bold lg:text-sm">Radius</p>
+							<p class="text-lg font-antonio sm:text-xl lg:text-4xl">58,232 KM</p>
+						</div>
+						<div
+							class="flex justify-between items-center border px-6 py-3 border-darkGray sm:flex-col sm:items-start sm:w-full lg:py-6">
+							<p class="font-leagueSpartan text-lightGray text-xs font-bold lg:text-sm">Average Temp.</p>
+							<p class="text-lg font-antonio sm:text-xl lg:text-4xl">-138°c</p>
+						</div>
+					</div>
+				</div>
+				<div class="tab-structure-content hidden justify-center items-center flex-col px-2">
+					<div class="lg:flex lg:flex-row lg:items-center lg:my-24 lg:w-full lg:justify-around">
+						<div class="mx-auto max-w-[110px] sm:max-w-[250px] lg:min-w-[400px] lg:flex lg:justify-center">
+							<img src="dist/img/planet-saturn-internal.svg" class="my-20" alt="Saturn Photo" />
+						</div>
+						<div class="text-white text-center px-2 sm:text-left lg:max-w-[400px]">
+							<div>
+								<h1 class="text-4xl uppercase mb-6 font-antonio sm:mb-4 sm:text-4xl lg:text-6xl lg:mb-8">Saturn</h1>
+							</div>
+							<div class="sm:flex sm:items-center lg:flex-col lg:items-start">
+								<p class="font-leagueSpartan font-normal">
+									Despite consisting mostly of hydrogen and helium, most of Saturn's mass is not in the gas phase,
+									because hydrogen becomes a non-ideal liquid when the density is above 0.01 g/cm3, which is reached at
+									a radius containing 99.9% of Saturn's mass.
+								</p>
+								<div class="hidden lg:block">
+									<p class="text-lightGray my-6 font-leagueSpartan">
+										Source:
+										<a
+											href="https://en.wikipedia.org/wiki/Saturn#Internal_structure"
+											class="font-bold underline"
+											target="_blank"
+											rel="noopener"
+											>Wikipedia</a
+										>
+										<img src="dist/img/icon-source.svg" class="inline align-middle" alt="" />
+									</p>
+								</div>
+								<div
+									class="tab-desktop hidden sm:flex flex-col px-2 text-sm font-bold min-w-[300px] ml-12 text-lightGray space-y-4 uppercase lg:ml-0 lg:px-0 lg:text-lg lg:w-full">
+									<div
+										class="flex tab-overview-tablet-desktop border border-darkGray py-3 px-6 cursor-pointer hover:bg-gray-700 transition-colors duration-300">
+										<p class="mr-4 text-lightGray">01</p>
+										<p class="text-white">Overview</p>
+									</div>
+									<div class="flex tab-structure-tablet-desktop border border-darkGray py-3 px-6 cursor-pointer">
+										<p class="mr-4 text-lightGray">02</p>
+										<p class="text-white">Internal - Structure</p>
+									</div>
+									<div
+										class="flex tab-surface-tablet-desktop border border-darkGray py-3 px-6 cursor-pointer hover:bg-gray-700 transition-colors duration-300">
+										<p class="mr-4 text-lightGray">03</p>
+										<p class="text-white">Surface - Geology</p>
+									</div>
+								</div>
+							</div>
+							<div class="lg:hidden">
+								<p class="text-lightGray my-6 font-leagueSpartan">
+									Source:
+									<a
+										href="https://en.wikipedia.org/wiki/Saturn#Internal_structure"
+										class="font-bold underline"
+										target="_blank"
+										rel="noopener"
+										>Wikipedia</a
+									>
+									<img src="dist/img/icon-source.svg" class="inline align-middle" alt="" />
+								</p>
+							</div>
+						</div>
+					</div>
+					<div
+						class="text-white w-full space-y-2 uppercase px-2 sm:flex sm:space-y-0 sm:space-x-4 sm:mb-4 lg:justify-around lg:space-x-8">
+						<div
+							class="flex justify-between items-center border px-6 py-3 border-darkGray sm:flex-col sm:items-start sm:w-full lg:py-6">
+							<p class="font-leagueSpartan text-lightGray text-xs font-bold lg:text-sm">Rotation time</p>
+							<p class="text-lg font-antonio sm:text-xl lg:text-4xl">10.8 Hours</p>
+						</div>
+						<div
+							class="flex justify-between items-center border px-6 py-3 border-darkGray sm:flex-col sm:items-start sm:w-full lg:py-6">
+							<p class="font-leagueSpartan text-lightGray text-xs font-bold lg:text-sm">Revolution Time</p>
+							<p class="text-lg font-antonio sm:text-xl lg:text-4xl">29.46 Years</p>
+						</div>
+						<div
+							class="flex justify-between items-center border px-6 py-3 border-darkGray sm:flex-col sm:items-start sm:w-full lg:py-6">
+							<p class="font-leagueSpartan text-lightGray text-xs font-bold lg:text-sm">Radius</p>
+							<p class="text-lg font-antonio sm:text-xl lg:text-4xl">58,232 KM</p>
+						</div>
+						<div
+							class="flex justify-between items-center border px-6 py-3 border-darkGray sm:flex-col sm:items-start sm:w-full lg:py-6">
+							<p class="font-leagueSpartan text-lightGray text-xs font-bold lg:text-sm">Average Temp.</p>
+							<p class="text-lg font-antonio sm:text-xl lg:text-4xl">-138°c</p>
+						</div>
+					</div>
+				</div>
+				<div class="tab-surface-content hidden justify-center items-center flex-col px-2">
+					<div class="lg:flex lg:flex-row lg:items-center lg:my-24 lg:w-full lg:justify-around">
+						<div
+							class="relative flex items-center mx-auto max-w-[110px] sm:max-w-[250px] lg:min-w-[400px] lg:justify-center z-[-10]">
+							<img src="dist/img/planet-saturn.svg" class="my-20" alt="Saturn Photo" />
+							<img
+								src="dist/img/geology-saturn.png"
+								class="absolute bottom-0 left-1/2 -translate-x-1/2 max-w-[80px] my-4 sm:max-w-[120px]"
+								alt="Saturn geology photo" />
+						</div>
+						<div class="text-white text-center px-2 sm:text-left lg:max-w-[400px]">
+							<div>
+								<h1 class="text-4xl uppercase mb-6 font-antonio sm:mb-4 sm:text-4xl lg:text-6xl lg:mb-8">Saturn</h1>
+							</div>
+							<div class="sm:flex sm:items-center lg:flex-col lg:items-start">
+								<p class="font-leagueSpartan font-normal">
+									The outer atmosphere of Saturn contains 96.3% molecular hydrogen and 3.25% helium by volume. The
+									planet's most famous feature is its prominent ring system, which is composed mostly of ice particles
+									with a smaller amount of rocky debris and dust.
+								</p>
+								<div class="hidden lg:block">
+									<p class="text-lightGray my-6 font-leagueSpartan">
+										Source:
+										<a
+											href="https://en.wikipedia.org/wiki/Saturn#Atmosphere"
+											class="font-bold underline"
+											target="_blank"
+											rel="noopener"
+											>Wikipedia</a
+										>
+										<img src="dist/img/icon-source.svg" class="inline align-middle" alt="" />
+									</p>
+								</div>
+								<div
+									class="tab-desktop hidden sm:flex flex-col px-2 text-sm font-bold min-w-[300px] ml-12 text-lightGray space-y-4 uppercase lg:ml-0 lg:px-0 lg:text-lg lg:w-full">
+									<div
+										class="flex tab-overview-tablet-desktop border border-darkGray py-3 px-6 cursor-pointer hover:bg-gray-700 transition-colors duration-300">
+										<p class="mr-4 text-lightGray">01</p>
+										<p class="text-white">Overview</p>
+									</div>
+									<div
+										class="flex tab-structure-tablet-desktop border border-darkGray py-3 px-6 cursor-pointer hover:bg-gray-700 transition-colors duration-300">
+										<p class="mr-4 text-lightGray">02</p>
+										<p class="text-white">Internal - Structure</p>
+									</div>
+									<div class="flex tab-surface-tablet-desktop border border-darkGray py-3 px-6 cursor-pointer">
+										<p class="mr-4 text-lightGray">03</p>
+										<p class="text-white">Surface - Geology</p>
+									</div>
+								</div>
+							</div>
+							<div class="lg:hidden">
+								<p class="text-lightGray my-6 font-leagueSpartan">
+									Source:
+									<a
+										href="https://en.wikipedia.org/wiki/Saturn#Atmosphere"
+										class="font-bold underline"
+										target="_blank"
+										rel="noopener"
+										>Wikipedia</a
+									>
+									<img src="dist/img/icon-source.svg" class="inline align-middle" alt="" />
+								</p>
+							</div>
+						</div>
+					</div>
+					<div
+						class="text-white w-full space-y-2 uppercase px-2 sm:flex sm:space-y-0 sm:space-x-4 sm:mb-4 lg:justify-around lg:space-x-8">
+						<div
+							class="flex justify-between items-center border px-6 py-3 border-darkGray sm:flex-col sm:items-start sm:w-full lg:py-6">
+							<p class="font-leagueSpartan text-lightGray text-xs font-bold lg:text-sm">Rotation time</p>
+							<p class="text-lg font-antonio sm:text-xl lg:text-4xl">10.8 Hours</p>
+						</div>
+						<div
+							class="flex justify-between items-center border px-6 py-3 border-darkGray sm:flex-col sm:items-start sm:w-full lg:py-6">
+							<p class="font-leagueSpartan text-lightGray text-xs font-bold lg:text-sm">Revolution Time</p>
+							<p class="text-lg font-antonio sm:text-xl lg:text-4xl">29.46 Years</p>
+						</div>
+						<div
+							class="flex justify-between items-center border px-6 py-3 border-darkGray sm:flex-col sm:items-start sm:w-full lg:py-6">
+							<p class="font-leagueSpartan text-lightGray text-xs font-bold lg:text-sm">Radius</p>
+							<p class="text-lg font-antonio sm:text-xl lg:text-4xl">58,232 KM</p>
+						</div>
+						<div
+							class="flex justify-between items-center border px-6 py-3 border-darkGray sm:flex-col sm:items-start sm:w-full lg:py-6">
+							<p class="font-leagueSpartan text-lightGray text-xs font-bold lg:text-sm">Average Temp.</p>
+							<p class="text-lg font-antonio sm:text-xl lg:text-4xl">-138°c</p>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+		<script src="src/js/main.js"></script>
+	</body>
 </html>
