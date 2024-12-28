@@ -1,13 +1,13 @@
 const hamburgerMenu = document.querySelector('.hamburger-icon')
 const navMobile = document.querySelector('.nav-mobile')
 
+let activeIndex = 0
+
 const tabs = [
 	{ button: document.querySelector('.tab-overview'), content: document.querySelector('.tab-overview-content') },
 	{ button: document.querySelector('.tab-structure'), content: document.querySelector('.tab-structure-content') },
 	{ button: document.querySelector('.tab-surface'), content: document.querySelector('.tab-surface-content') },
 ]
-
-let activeIndex = 0
 
 const tabsTabletDesktop = [
 	{
@@ -42,7 +42,7 @@ function switchTab(index) {
 	})
 
 	tabsTabletDesktop.forEach(({ contents }, i) => {
-		contents.forEach((content) => {
+		contents.forEach(content => {
 			if (i == index) {
 				content.classList.add('flex')
 				content.classList.remove('hidden')
@@ -65,7 +65,7 @@ function updateTabStyles(activeIndex) {
 	})
 
 	tabsTabletDesktop.forEach(({ buttons }, i) => {
-		buttons.forEach((button) => {
+		buttons.forEach(button => {
 			if (i == activeIndex) {
 				button.classList.add('tab-emphasis-background')
 			} else {
@@ -76,7 +76,6 @@ function updateTabStyles(activeIndex) {
 }
 
 tabs.forEach(({ button }, index) => {
-	console.log(button);
 	button.addEventListener('click', () => {
 		switchTab(index)
 	})
@@ -90,4 +89,3 @@ tabsTabletDesktop.forEach(({ buttons, contents }, index) => {
 	})
 })
 switchTab(0)
-
