@@ -29,7 +29,6 @@ hamburgerMenu.addEventListener('click', () => {
 })
 
 function switchTab(index) {
-	console.log(index);
 	activeIndex = index
 
 	tabs.forEach(({ content }, i) => {
@@ -59,18 +58,18 @@ function switchTab(index) {
 function updateTabStyles(activeIndex) {
 	tabs.forEach(({ button }, i) => {
 		if (i == activeIndex) {
-			button.classList.add('tab-emphasis')
+			button.classList.add('tab-emphasis-border')
 		} else {
-			button.classList.remove('tab-emphasis')
+			button.classList.remove('tab-emphasis-border')
 		}
 	})
 
 	tabsTabletDesktop.forEach(({ buttons }, i) => {
 		buttons.forEach((button) => {
 			if (i == activeIndex) {
-				button.classList.add('tab-emphasis')
+				button.classList.add('tab-emphasis-background')
 			} else {
-				button.classList.remove('tab-emphasis')
+				button.classList.remove('tab-emphasis-background')
 			}
 		})
 	})

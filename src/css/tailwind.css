@@ -12,6 +12,9 @@ body {
   width: 100%;
 }
 
-.tab-emphasis {
+.tab-emphasis-border {
   border-bottom: 2px solid lightblue;
+}
+.tab-emphasis-background {
+  background-color: rgb(65, 158, 187);
 }
